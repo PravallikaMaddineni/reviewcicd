@@ -1,0 +1,177 @@
+/* ================= Navbar ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #F7CAC9; /* light coral */
+  padding: 12px 24px;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  overflow: visible;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff; /* logo stays white */
+  flex-shrink: 0;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+  position: relative;
+}
+
+.navbar ul li a,
+.dropdown .dropbtn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* ================= Dropdown ================= */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #E88DA8; /* pinkish for links */
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #FDECEF; /* light highlight */
+  border-radius: 4px;
+}
+
+.arrow {
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* ================= Hero Section ================= */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background-color: #FFF0F2; /* very soft pink */
+}
+
+.hero h2 {
+  font-size: 36px;
+  color: #E88DA8; /* matching pink */
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.signup-btn {
+  background-color: #E88DA8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #D06B94; /* darker pink hover */
+}
+
+/* ================= Features Section ================= */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.feature .icon {
+  font-size: 50px;
+  color: #E88DA8; /* consistent pink */
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+  }
+}
